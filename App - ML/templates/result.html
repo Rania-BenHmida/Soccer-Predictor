@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Prediction Result</h1>
+        <p>Predicted Position: <strong class="highlight">{{ position }}</strong></p>
 
+        <h2>Similar Players</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Position</th>
+                    <th>Goals</th>
+                    <th>Assists</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in recommendations %}
+                <tr>
+                    <td>{{ player.Name }}</td>
+                    <td>{{ player.Club }}</td>
+                    <td>{{ player.Position }}</td>
+                    <td>{{ player.Goals }}</td>
+                    <td>{{ player.Assists }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('accueil') }}">
+            <button class="btn">Back to Home</button>
+        </a>
+    </div>
+</body>
+</html>

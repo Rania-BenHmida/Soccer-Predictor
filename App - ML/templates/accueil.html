@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to Soccer Predictor</h1>
+        <p class="animated-text">
+            Whether you're a fan, a coach, or a scout, step into the world of soccer insights! Predict player positions, explore top talent, and make informed decisions with our advanced analytics platform.
+        </p>
+        <div class="button-group">
+            <a href="/index">
+                <button class="btn">Start Prediction!</button>
+            </a>
+            <a href="/recommend">
+                <button class="btn">Discover Top Players!</button>
+            </a>
+        </div>
+        <div class="auth-links">
+            {% if current_user.is_authenticated %}
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/login">Login</a> | <a href="/register">Register</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

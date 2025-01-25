@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Position Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Predict Player Position</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="goals">Goals:</label>
+                <input type="number" name="goals" id="goals" placeholder="Enter the number of goals" required>
+            </div>
+            <div class="form-group">
+                <label for="assists">Assists:</label>
+                <input type="number" name="assists" id="assists" placeholder="Enter the number of assists" required>
+            </div>
+            <div class="form-group">
+                <label for="shots_on_target">Shots on Target:</label>
+                <input type="number" name="shots_on_target" id="shots_on_target" placeholder="Enter shots on target" required>
+            </div>
+            <div class="form-group">
+                <label for="big_chances_created">Big Chances Created:</label>
+                <input type="number" name="big_chances_created" id="big_chances_created" placeholder="Enter big chances created" required>
+            </div>
+            <div class="form-group">
+                <label for="passes">Passes:</label>
+                <input type="number" name="passes" id="passes" placeholder="Enter the number of passes" required>
+            </div>
+            <div class="form-group">
+                <label for="tackles">Tackles:</label>
+                <input type="number" name="tackles" id="tackles" placeholder="Enter the number of tackles" required>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <a href="/accueil">
+            <button class="btn">Back to Home</button>
+        </a>
+    </div>
+</body>
+</html>

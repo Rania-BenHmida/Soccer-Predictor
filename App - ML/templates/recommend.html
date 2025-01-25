@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Players Recommendation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Top 5 Players Recommendation</h1>
+
+        <!-- Formulaire pour sélectionner une position -->
+        <form method="POST" action="/recommend">
+            <label for="position">Select Position:</label>
+            <select id="position" name="position" required>
+                {% for position in positions %}
+                <option value="{{ position }}">{{ position }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn">Get Top Players</button>
+        </form>
+
+        <!-- Tableau des joueurs -->
+        {% if top_players %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Club</th>
+                <th>Position</th>
+                <th>Performance Score</th>
+            </tr>
+            {% for player in top_players %}
+            <tr>
+                <td>{{ player['Name'] }}</td>
+                <td>{{ player['Club'] }}</td>
+                <td>{{ player['Position'] }}</td>
+                <td>{{ player['Performance Score'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+        <a href="/"><button class="btn">Back to Home</button></a>
+    </div>
+</body>
+</html>
