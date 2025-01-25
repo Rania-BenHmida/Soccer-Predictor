@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/télécharger.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+/* Content Wrapper */
+.content {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Titles */
+h1 {
+    color: #FFD700; /* Golden yellow */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    display: block;
+    color: #FFD700; /* Golden yellow */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 123, 255, 0.5);
+    border: 1px solid #007BFF;
+}
+
+/* Buttons */
+button.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Form Text */
+.form-text {
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+.form-text a {
+    color: #FFD700;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.form-text a:hover {
+    color: #FF6347;
+    text-decoration: none;
+}
